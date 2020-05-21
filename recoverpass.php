@@ -26,7 +26,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" ></script>
     <link rel="stylesheet"  href ="style(1).css">
 </head>
-<body>
+<body style="background-image: url('background.jpg');background-repeat: ;background-size: 100%,100%">
 <section id="nav-bar">
    <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top">
    <div class="container-fluid">

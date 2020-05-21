@@ -26,7 +26,7 @@ if(isset($_POST['login-btn']))
     
     if(count($errors)===0)
     {
-    $sql=" SELECT * FROM admintable WHERE username='$username' AND password='$password' LIMIT 1";
+    $sql=" SELECT * FROM admin WHERE username='$username' AND password='$password' LIMIT 1";
     $result=mysqli_query($conn,$sql);
     if($result)
     {

@@ -28,12 +28,13 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" ></script>
     <link rel="stylesheet"  href ="style(1).css">
 </head>
-<body >
+<body style="background-image: url('background.jpg');background-repeat: ;background-size: 100%,100%" >
 <section id="nav-bar">
    <nav class="navbar navbar-expand-lg navbar-light ">
    <div class="container-fluid">
     <a class="navbar-brand" href="adminpage.php"><img src="logo.jpg" style="height:40px" ></a>
     <ul class=" navbar-nav navbar-right" >
+    <li class="nav-item"><a class="nav-link" href="help1.php" style="color:gray"><strong>Request for Code</strong></a></li>
     <li class="nav-item dropdown ml-auto">
 		<a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:gray">
 		<strong><?php echo $_SESSION['username'];?></strong></a>

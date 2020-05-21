@@ -27,9 +27,9 @@
 <section id="nav-bar">
    <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top">
    <div class="container-fluid">
-    <a class="navbar-brand" href="fpass.php"><img src="CMS-LOGO-removebg-preview.png" style="height:40px" ></a>
+    <a class="navbar-brand" href="fpass.php"><img src="logo.jpg" style="height:40px" ></a>
     <ul class=" navbar-nav navbar-right" >
-      <li class="nav-item"><a class="nav-link" href="help.php" style="color:gray"><strong>Support</strong></a></li>
+      <li class="nav-item"><a class="nav-link" href="help.php" style="color:gray"><strong>Request for Code</strong></a></li>
       <li class="nav-item dropdown">
 		<a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:gray">
 		<strong>Login/Signup</strong></a>

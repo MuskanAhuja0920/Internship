@@ -47,6 +47,91 @@ $message = (new Swift_Message('Verify your email address'))
 $result = $mailer->send($message);
 }
 
+function sendQueryEmail($userEmail)
+{
+$body='<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <style>
+    
+    </style>
+    <title>Query</title>
+</head>
+<body>
+    <div class="wrapper">
+    <p>
+     <strong>You received a query from:</strong><br>
+     <strong>Name:</strong>'.$_POST['username'].'<br>
+     <strong>Email:</strong>'.$_POST['email'].'<br>
+     <strong>Reason:</strong>'.$_POST['query'].'
+    </p>
+    </div>
+</body>
+</html>';
+
+
+global $mailer;
+// Create a message
+$message = (new Swift_Message('Code Request'))
+  ->setFrom($userEmail)
+  ->setTo(EMAIL)
+  ->setBody($body,'text/html');
+  
+
+// Send the message
+$result = $mailer->send($message);
+if(!$result)
+  {
+      $msg='<div class="alert alert-danger text-center">
+      Something Went Wrong!
+      </div>';
+  }
+  else{
+      $msg='<div clsdd="alert alert-succes text-center">
+      Message Sent Succesfully!
+      </div>';
+  }
+}
+function sendUserEmail($userEmail)
+{
+  $body='<!DOCTYPE html>
+
+  <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+      <meta charset="utf-8" />
+      <style>
+      
+      </style>
+      <title>Query Submission</title>
+  </head>
+  <body>
+      <div class="wrapper">
+      <p>
+      <strong style="font-size:20px">
+      Thank you for submiting your request.<br>
+      Your Query:'.$_POST['query'].'<br>
+      Someone from our team will get back to you within 24hrs.</strong>
+      </p>
+      </div>
+  </body>
+  </html>';
+
+global $mailer;
+// Create a message
+$message = (new Swift_Message('Code Request Submission'))
+  ->setFrom(EMAIL)
+  ->setTo($userEmail)
+  ->setBody($body,'text/html');
+  $result = $mailer->send($message);
+}
+
+function function_alert($message) { 
+      
+    // Display the alert box  
+    echo "<script>alert('$message');</script>"; 
+} 
 
 
 /////////////////////////////////////////recover password///////////////////////////////////
